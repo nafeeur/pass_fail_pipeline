@@ -52,7 +52,7 @@ def run_check(ticker, check_name, series, offset, threshold_pct):
         pct_change = (value - compared_value) / compared_value * 100
         if abs(pct_change) > threshold_pct:
             flags.append({
-                "ticker":s ticker,
+                "ticker":ticker,
                 "check": check_name,
                 "date": date,
                 "value": value,
