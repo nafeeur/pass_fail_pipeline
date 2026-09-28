@@ -1,0 +1,27 @@
+{
+  "indexes": {
+    "SP500": { "file": "data/SP500.csv", "column": "SP500" },
+    "DJIA":  { "file": "data/DJIA.csv",  "column": "DJIA" },
+    "DJCA":  { "file": "data/DJCA.csv",  "column": "DJCA" },
+    "DJTA":  { "file": "data/DJTA.csv",  "column": "DJTA" },
+    "DJUA":  { "file": "data/DJUA.csv",  "column": "DJUA" }
+  },
+  "checks": {
+    "day_over_day": {
+      "enabled": true,
+      "offset": 1,
+      "default_threshold_pct": 1.0,
+      "overrides": {
+        "SP500": 1.5
+      }
+    },
+    "week_over_week": {
+      "enabled": true,
+      "offset": 5,
+      "default_threshold_pct": 5.0,
+      "overrides": {}
+    }
+  },
+  "output_file": "results.csv"
+}
+
