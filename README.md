@@ -56,9 +56,9 @@ Edit `config.json` (no code changes needed):
 ## Design notes
 
 - One `run_check` function handles both checks, only the `offset` differs.
-- Config is a static JSON file 
+- Config is a static JSON file, so thresholds can change without touching the code.
 - Blank rows in the data are skipped.
 
 ## AI assistance
 
-I generated almost all of this code using Claude Sonnet 5 and my own custom-built coding harness (github.com/nafeeur/MaskShift). I then manually tested and verified it myself. The initial design was mine, including the config structure and the decision to use only Python and JSON, so that no external libraries are needed. Config validation was not implmented in this version. 
+I generated almost all of this code using Claude Sonnet 5 and my own custom-built coding harness (github.com/nafeeur/MaskShift). I then manually tested and verified it myself. The initial design was mine, including the config structure and the decision to use only Python and JSON, so that no external libraries are needed. Config validation was not implemented in this version.
